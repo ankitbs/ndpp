@@ -37,7 +37,7 @@ def validate_columns(source_df, column_name_mapping):
             not_present_col.append(col)
         else:
             count+=1
-    if(count==len(source_df.columns)): #check for total columns present or not
+    if(count==len(column_name_mapping.column_name)): #check for total columns present or not
         return source_df
     else:
         return not_present_col
